@@ -1,0 +1,24 @@
+
+.mui-content {
+	background-color: rgba(0, 0, 0, 0);
+}
+#video {
+	position: absolute;
+	width: 1060px;
+	height: 790px;
+	margin: 20px 10px 0 10px;
+	z-index: 2;
+}
+#introduction {
+	position: absolute;
+	top: 910px;
+	width: 1060px;
+	height: 570px;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 50px;
+	margin: 0 10px;
+	color: #000000;
+	font-size: 30px;
+	line-height: 50px;
+	z-index: 2;
+}

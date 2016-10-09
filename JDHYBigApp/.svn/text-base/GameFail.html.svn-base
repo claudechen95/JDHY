@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<style type="text/css">
+			#introduction {
+				position: absolute;
+				top: 160px;
+				width: 760px;
+				height: 1200px;
+				background: rgba(255, 255, 255, 0.7);
+				padding: 50px;
+				margin: 0 160px;
+				color: #000000;
+				font-size: 40px;
+				line-height: 150px;
+				color:#6641E2;
+				z-index: 2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<img id="img-bg" src="img/material/gamefail.jpg" width="1080" height="1920" usemap="#map" />
+			<map name="map" id="map">
+				<area alt="area1" shape="rect" coords="650,1630,930,1770" href="index.html" />
+				<area alt="area2" shape="rect" coords="180,1630,460,1770" href="Game1_1.html" />
+			</map>
+			<div id="introduction">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于你的<b>判断失误</b>，宝船迷失在大海之中，作为一个合格的航海专家你还有很多的航海知识需要学习，请继续加油观看我们的航海小视频吧！
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			setTimeout(function() {
+				location = 'index.html'
+			}, 600000); //长时间无操作退回主页
+		});
+	</script>
+
+</html>

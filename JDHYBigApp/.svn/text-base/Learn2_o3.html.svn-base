@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/learn2_o_all.css" />
+	</head>
+
+	<body>
+		<video id="video" src='raw/video/learn2_3.mp4' poster="img/material/learn2_3.png" controls="controls">
+		</video>
+		<div id="introduction">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南门双星属于半人马星座，位于南十字星座与海蛇星座之间。南门双星与灯笼骨星均是过洋牵星术中经常观测的南面主要天体。双星并列于天空，其近十字架的一颗名马腹（Hadar），另一颗星叫南门二（Rigel klntaurn）。
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementById("video").addEventListener('ended', function(event) {
+				this.load();
+				this.play();
+			});
+		});
+	</script>
+
+</html>

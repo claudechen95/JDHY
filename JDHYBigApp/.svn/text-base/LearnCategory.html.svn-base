@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<img id="img-bg" src="img/material/learncategory.jpg" usemap="#categorymap" />
+			<map name="categorymap" id="categorymap">
+				<area alt="area1" shape="rect" coords="165,360,590,670" href="Learn1_1.html" />
+				<area alt="area2" shape="rect" coords="625,360,915,670" href="Learn1_2.html" />
+				<area alt="area3" shape="rect" coords="165,715,455,1370" href="Learn2_1.html" />
+				<area alt="area4" shape="rect" coords="490,715,915,1020" href="Learn1_3.html" />
+				<area alt="area5" shape="rect" coords="490,1065,915,1370" href="Learn1_4.html" />
+				<area alt="area5" shape="rect" coords="650,1630,1845,2120" href="index.html" />
+			</map>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			setTimeout(function() {
+				location = 'index.html'
+			}, 600000); //长时间无操作退回主页
+		});
+
+		function openWindow(a) {
+			var styles = {
+				hardwareAccelerated: true
+			};
+			var w = plus.webview.create(a, a, styles);
+			w.show();
+		}
+	</script>
+
+</html>

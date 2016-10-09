@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/playvideo_all.css" />
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<img id="img-bg" src="img/material/video1.jpg" usemap="#map" />
+			<map name="map" id="map">
+				<area alt="area1" shape="rect" coords="650,1630,930,2120" href="index.html" />
+			</map>
+			<video id="video" src='raw/video/video1.mp4' poster="img/material/video1_1.png" controls="controls">
+			</video>
+			<div id="introduction">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自明成祖永乐三年(1405年)至宣宗宣德八年(1433年)，郑和前后下西洋七次，西洋是中国古代规模最大、船只最多（240多艘）、海员最多、时间最久的海上航行。
+				<br />
+				<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郑和船队运用“牵星术”与水罗盘等当时具有先进水平的航海技术，曾达到过三十多个国家，最远曾达非洲东岸。得以传世的《郑和航海图》记录重要出航地点即有20余处，主要航线有42条之多，是世界上现存最早的航海图。
+
+			</div>
+
+		</div>
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			document.getElementById("video").addEventListener('ended', function(event) {
+				this.load();
+				this.play();
+			});
+			setTimeout(function(){location='index.html'},600000);//长时间无操作退回主页
+		});
+	</script>
+
+</html>

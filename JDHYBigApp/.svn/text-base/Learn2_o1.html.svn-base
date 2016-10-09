@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/learn2_o_all.css" />
+	</head>
+
+	<body>
+		<video id="video" src='raw/video/learn2_1.mp4' poster="img/material/learn2_1.png" controls="controls">
+		</video>
+		<div id="introduction">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在郑和航海图·过洋牵星图中称为北辰星，是牵星术最常用的天体。北极星是一颗叫勾陈一的亮星，西名塞纳久（Cynosure）。此星位于小熊座小熊的尾巴尖处。北极星正处在地轴的北部延长线上，所以才可以指示北方。可以利用北斗七星与仙后星座，在夜空中寻找和定位北极星。
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			//document.getElementsByTagName("body")[0].style.height = innerHeight + "px";
+			document.getElementById("video").addEventListener('ended', function(event) {
+				this.load();
+				this.play();
+			});
+		});
+	</script>
+
+</html>

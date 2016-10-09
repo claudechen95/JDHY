@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/game1_all.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<img id="img-bg" src="img/material/game1.jpg" usemap="#map" />
+			<map name="map" id="map">
+				<area alt="area1" shape="rect" coords="30,1130,518,1275" href="Game2_1.html" />
+				<area alt="area2" shape="rect" coords="555,1130,1040,1275" href="Game2_1.html" />
+				<area alt="area3" shape="rect" coords="30,1320,518,1465" href="Game2_1.html" />
+				<area alt="area4" shape="rect" coords="555,1320,1130,1465" href="Game2_1.html" />
+
+				<area alt="area5" shape="rect" coords="650,1630,930,1770" href="index.html" />
+			</map>
+			<img id="game-img" src="img/material/game1_1.jpg">
+			<div id="introduction">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你们肩负着<b>朱棣</b>的嘱托将郑和宝船使向茫茫大海，面对无边无际的大海，船上的人都不知道将开往何方，作为航海专家的你可否为他们指明前进的道路。请你告诉他们你们即将<b>去何处</b>。
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			setTimeout(function() {
+				location = 'index.html'
+			}, 600000); //长时间无操作退回主页
+		});
+	</script>
+
+</html>

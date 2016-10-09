@@ -1,0 +1,96 @@
+{
+  "Learn2.html": {
+    "resources": [
+      "raw/video/learn2_1.mp4",
+      "Learn2_o1.html",
+      "Learn2_o2.html",
+      "img/material/learn2_1.png",
+      "img/material/learn2.jpg",
+      "raw/video/learn2_2.mp4",
+      "img/material/learn2_2.png",
+      "css/learn2_o_all.css",
+      "LearnCategory.html"
+    ],
+    "refer": []
+  },
+  "index.html": {
+    "resources": [
+      "img/material/index.jpg",
+      "LearnCategory.html",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/all.css",
+      "Game.html"
+    ],
+    "refer": [
+      "LearnCategory.html"
+    ]
+  },
+  "LearnCategory.html": {
+    "resources": [
+      "Learn2.html",
+      "img/material/learncategory.jpg",
+      "index.html",
+      "Learn1_1.html",
+      "Learn1_2.html",
+      "Learn2_1.html"
+    ],
+    "refer": [
+      "Learn2.html"
+    ]
+  },
+  "Learn1_1.html": {
+    "resources": [
+      "css/learn1_all.css",
+      "LearnCategory.html",
+      "img/material/learn1.jpg",
+      "img/material/l1_1.jpg"
+    ],
+    "refer": [
+      "LearnCategory.html"
+    ]
+  },
+  "Learn1_2.html": {
+    "resources": [
+      "img/material/l1_2.jpg"
+    ],
+    "refer": []
+  },
+  "Learn2_1.html": {
+    "resources": [
+      "raw/video/learn2_1.mp4",
+      "Learn2_o1.html",
+      "img/material/learn2_1.png",
+      "Learn2_2.html",
+      "img/material/learn2.jpg",
+      "css/learn2_o_all.css"
+    ],
+    "refer": [
+      "Learn2_2.html"
+    ]
+  },
+  "Learn2_2.html": {
+    "resources": [
+      "Learn2_o2.html",
+      "raw/video/learn2_2.mp4",
+      "img/material/learn2_2.png"
+    ],
+    "refer": []
+  },
+  "Game1_1.html": {
+    "resources": [
+      "img/material/game1.jpg",
+      "img/material/game1_1.jpg",
+      "css/game1_all.css"
+    ]
+  },
+  "Game.html": {
+    "resources": [
+      "Game1_1.html",
+      "img/material/game.jpg"
+    ],
+    "refer": [
+      "Game1_1.html"
+    ]
+  }
+}

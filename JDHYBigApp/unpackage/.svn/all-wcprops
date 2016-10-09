@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/JDHYBigApp/!svn/ver/1/unpackage
+END
+.dependencies
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/JDHYBigApp/!svn/ver/11/unpackage/.dependencies
+END
+.confirmed_dependencies
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/JDHYBigApp/!svn/ver/14/unpackage/.confirmed_dependencies
+END

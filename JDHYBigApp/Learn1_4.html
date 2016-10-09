@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/learn1_all.css" />
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<img id="img-bg" src="img/material/learn1.jpg" usemap="#map" />
+			<map name="map" id="map">
+				<area alt="area1" shape="rect" coords="650,1630,930,2120" href="LearnCategory.html" />
+				<area alt="area2" shape="rect" coords="180,1630,460,2120" href="index.html" />
+			</map>
+			<div id="learnimg" style="background: url(img/material/l1_4.jpg) no-repeat center;background-size: 100% 100%;">
+			</div>
+			<div id="introduction">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明代航海图籍，原名《自宝船厂开船从龙江关出水直抵外国诸番图》﹐后人多简称为《郑和航海图》。原图为自右而左展开的手卷式﹐茅元仪收入《武备志》卷二百四十后改为书本式﹐共二十四页﹐包括茅元仪序一页﹐图二十页﹐《过洋牵星图》二页（四幅）﹐空白一页。
+				<br />
+				<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结合其所记针路及所附的《过洋牵星图》﹐并以今图对照﹐便可发现该图在描绘亚非沿海各地形势﹐以及在认识海洋和掌握航海术等方面﹐在当时都达到了较高的科学水平。《郑和航海图》制图的范围广，内容丰富，是世界上现存最早的航海图集。
+
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			setTimeout(function() {
+				location = 'index.html'
+			}, 600000); //长时间无操作退回主页
+		});
+		mui.plusReady(function() {
+			plus.audio.createPlayer("_www/raw/audio/audio1_4.mp3").play();
+		});
+	</script>
+
+</html>

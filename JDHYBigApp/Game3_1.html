@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/game1_all.css" />
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="tip" class="tip">
+				<img id="tip-bk" class="tip-bk" src="img/material/gameTip.jpg" usemap="#maptip" />
+				<map name="maptip" id="maptip">
+					<area alt="继续玩" shape="rect" coords="650,1630,930,2120" onclick="hideTip()" />
+					<area alt="不玩了" shape="rect" coords="180,1630,460,2120" href="index.html" />
+				</map>
+				<div class="tip-title" style="">回答错了！
+					<br/>你需要确定航向，到达前人记载的航线位置</div>
+				<img id="tip-img" class="tip-img" src="img/material/game3tip.jpg">
+
+				</img>
+			</div>
+			<img id="img-bg" src="img/material/game3.jpg" usemap="#map" />
+			<map name="map" id="map">
+				<area id="option1" alt="area1" shape="rect" coords="40,1234,520,1380" onclick="showTip()" />
+				<area id="option2" alt="area2" shape="rect" coords="560,1234,1040,1380" onclick="showTip()" />
+				<area alt="area3" shape="rect" coords="650,1630,930,1770" href="index.html" />
+			</map>
+			<img id="game-img" src="img/material/game3_1.jpg">
+			<div id="introduction">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过观察你发现了这个星宿的名称，在前人的记载中已经明确记录船与星宿的位置关系，这个时候聪明的你想到使用<b>牵星板</b>来判定船与星星的位置关系，请你通过过洋牵星术来判断宝船应当<b>怎样行使</b>才能使船行驶到正确的航线上。
+			</div>
+			<div class="key" id="key"></div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		var timeout = 10; //10分钟倒计时
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			prepareGame();
+			setTimeout(function() {
+				if (--timeout <= 0) { //时间到
+					location = 'index.html';
+				}
+			}, 60000); //每分钟检查是否退回首页
+		}); 
+
+		function prepareGame() {
+			var randomImg = Math.ceil(Math.random() * 4); //1-4随机数
+			switch (randomImg) {
+				case 2:
+				case 3:
+					document.getElementById("option1").onclick = function() {
+						location = 'GameSuccess.html'
+					};
+					document.getElementById("key").innerHTML = '1';
+					break;
+				case 1:
+				case 4:
+					document.getElementById("option2").onclick = function() {
+						location = 'GameSuccess.html'
+					};
+					document.getElementById("key").innerHTML = '2';
+					break;
+			}
+			document.getElementById("game-img").src = "img/material/game3_" + randomImg + ".jpg";
+		}
+
+		function showTip() {
+			timeout = 10; //重置倒计时
+			document.getElementById('tip').style.display = 'block';
+		}
+
+		function hideTip() {
+			timeout = 10; //重置倒计时
+			document.getElementById('tip').style.display = 'none';
+		}
+	</script>
+
+</html>

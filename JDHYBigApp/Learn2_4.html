@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<style type="text/css">
+			.mui-content {
+				background-color: rgba(0, 0, 0, 0);
+			}
+			
+			#ifr {
+				display: block;
+				position: absolute;
+				top: 0;
+				height: 0;
+				width: 1060px;
+				height: 1055px;
+				margin: 0 10px;
+				z-index: 2;
+			}
+			
+			#img-bg {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<iframe id="ifr" name="ifr" src="Learn2_o4.html" frameborder="no"></iframe>
+			<img id="img-bg" src="img/material/learn2.jpg" usemap="#categorymap" />
+			<map name="categorymap" id="categorymap">
+				<area alt="area1" shape="rect" coords="30,1130,580,1260" href="Learn2_1.html" />
+				<area alt="area2" shape="rect" coords="580,1130,1130,1260" href="Learn2_2.html"  />
+				<area alt="area3" shape="rect" coords="30,1280,510,1410" href="Learn2_3.html"/>
+				<area alt="area4" shape="rect" coords="580,1280,1130,1410" href="Learn2_4.html" />
+				<area alt="area5" shape="rect" coords="30,1430,510,1560" href="Learn2_5.html" />
+				<area alt="area6" shape="rect" coords="580,1430,1130,1560" href="Learn2_6.html"/>
+
+				<area alt="area8" shape="rect" coords="650,1630,930,2120" href="LearnCategory.html" />
+				<area alt="area9" shape="rect" coords="180,1630,460,2120" href="index.html" />
+
+			</map>
+		</div>
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		var audioPlayer;
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			setTimeout(function() {
+				location = 'index.html'
+			}, 600000); //长时间无操作退回主页
+		});
+		mui.plusReady(function() {
+			//自动播放第一个option的声音
+			audioPlayer = plus.audio.createPlayer("_www/raw/audio/audio2_4.mp3");
+			audioPlayer.play();
+		});
+
+//		function playAudio(fileName) {
+//			audioPlayer.stop();
+//			audioPlayer = plus.audio.createPlayer("_www/raw/audio/" + fileName);
+//			audioPlayer.play();
+//		}
+	</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+				<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/learn2_o_all.css" />
+	</head>
+
+	<body>
+		<video id="video" src='raw/video/learn2_2.mp4' poster="img/material/learn2_2.png" controls="controls">
+		</video>
+		<div id="introduction">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;布司星是过洋牵星术中经常使用的天体，是英仙星座的主星，称为天船三（英仙座α），位于金牛星座与仙后星座之间。它比英仙星座著名的大陵五（英仙座β）更亮。通常通过寻找英仙星座定位布司星。
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementById("video").addEventListener('ended', function(event) {
+				this.load();
+				this.play();
+			});
+		});
+	</script>
+
+</html>

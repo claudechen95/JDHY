@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/playvideo_all.css" />
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<img id="img-bg" src="img/material/video3.jpg" usemap="#map" />
+			<map name="map" id="map">
+				<area alt="area1" shape="rect" coords="650,1630,930,2120" href="index.html" />
+			</map>
+			<video id="video" src='raw/video/video3.mp4' poster="img/material/video3_1.png" controls="controls">
+			</video>
+			<div id="introduction">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以郑和下西洋为契机，习近平主席运筹帷幄，高屋建瓴，站在时代的制高点，立足本国，放眼全球，从世界经济实际出发以历史上的海上丝绸之路为纽带，在2013年10月访问东盟时提出了构建“21世纪海上丝绸之路”的战略构想。
+				<br />
+				<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“海上丝绸之路”这一名称，意味着将是一条和平、安全、合作、共荣之路，将以经济合作带动沿线国家走向全面合作。
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			document.getElementById("video").addEventListener('ended', function(event) {
+				this.load();
+				this.play();
+			});
+			setTimeout(function() {
+				location = 'index.html'
+			}, 600000); //长时间无操作退回主页
+		});
+	</script>
+
+</html>

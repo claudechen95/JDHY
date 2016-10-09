@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/game1_all.css" />
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="tip" class="tip">
+				<img id="tip-bk" class="tip-bk" src="img/material/gameTip.jpg" usemap="#maptip" />
+				<map name="maptip" id="maptip">
+					<area alt="继续玩" shape="rect" coords="650,1630,930,2120" onclick="hideTip()" />
+					<area alt="不玩了" shape="rect" coords="180,1630,460,2120" href="index.html" />
+				</map>
+				<div class="tip-title" style="">回答错了！
+					<br/>你选择的“<span id='star-name'></span>”是这样的</div>
+				<img id="tip-img" class="tip-img" src="img/material/game2_1.gif">
+
+				</img>
+			</div>
+
+			<img id="img-bg" src="img/material/game2.jpg" usemap="#map" />
+			<map name="map" id="map">
+				<area id="option1" alt="area1" shape="rect" coords="30,1130,580,1260" onclick="showTip('game2_1.gif','北极星')" />
+				<area id="option2" alt="area2" shape="rect" coords="580,1130,1130,1260" onclick="showTip('game2_2.gif','布司星')" />
+				<area id="option3" alt="area3" shape="rect" coords="30,1280,510,1410" onclick="showTip('game2_3.gif','南门双星')" />
+				<area id="option4" alt="area4" shape="rect" coords="580,1280,1130,1410" onclick="showTip('game2_4.gif','灯笼骨星')" />
+				<area id="option5" alt="area5" shape="rect" coords="30,1430,510,1560" onclick="showTip('game2_5.gif','织女星')" />
+				<area id="option6" alt="area6" shape="rect" coords="580,1430,1130,1560" onclick="showTip('game2_6.gif','牛郎星')" />
+				<area alt="area7" shape="rect" coords="650,1630,930,1770" href="index.html" />
+			</map>
+			<img id="game-img" src="img/material/game2_1.gif">
+			<div id="introduction">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宝船按照你选择的地方全速前进，夜是那么的安静，海水拍打着船发出阵阵声响，在黑夜中你们渐渐<b>迷失了方向</b>，此时你们最重要是要找到方向，看着夜空中的星宿，你想到一个<b>前人记载的办法</b>。每一个星宿都有自己的位置，现在在你眼前的是<b>什么星宿</b>，请做出判断。
+			</div>
+			<div class="key" id="key"></div>
+		</div>
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		var timeout = 10; //10分钟倒计时
+		mui.init();
+		mui.ready(function() {
+			document.getElementsByClassName("mui-content")[0].style.height = innerHeight + "px";
+			document.getElementsByClassName("mui-content")[0].style.width = innerWidth + "px";
+			prepareGame();
+			setTimeout(function() {
+				if (--timeout <= 0) { //时间到
+					location = 'index.html';
+				}
+			}, 60000); //每分钟检查是否退回首页
+		});
+
+		function prepareGame() {
+			var random = Math.ceil(Math.random() * 6); //1-6随机数
+			document.getElementById("option" + random).href = "Game3_1.html";
+			document.getElementById("game-img").src = "img/material/game2_" + random + ".gif";
+			//提示
+			document.getElementById("key").innerHTML = random + '';
+		}
+
+		function showTip(starImg, starName) {
+			timeout = 10; //重置倒计时
+			document.getElementById('tip').style.display = 'block';
+			document.getElementById('tip-img').src = 'img/material/' + starImg;
+			document.getElementById('star-name').innerText = starName;
+		}
+
+		function hideTip() {
+			timeout = 10; //重置倒计时
+			document.getElementById('tip').style.display = 'none';
+		}
+	</script>
+
+</html>
